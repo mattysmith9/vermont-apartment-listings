@@ -1,19 +1,28 @@
 {
   "name": "apartments",
   "version": "1.0.0",
-  "description": "An app that scrapes Vermont craigslist for daily apartment prices.",
+  "description": "An app that scrapes Vermont Craigslist for daily apartment prices.",
   "main": "server.js",
   "scripts": {
+    "frontend-install": "npm install --prefix frontend",
     "start": "node server.js",
     "server": "nodemon server.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "import": "node import.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+github.com:mattysmith9/vermont-apartment-listings.git"
   },
   "keywords": [
     "Apartment Scraper",
     "Craigslist",
     "Apartments",
     "Prices",
-    "Vermont"
+    "Vermont",
+    "Mongo",
+    "Atlas"
   ],
   "author": "Matty Smith",
   "license": "ISC",
